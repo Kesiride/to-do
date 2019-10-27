@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ToDoModel } from '../models/model';
 
 @Component({
   selector: 'app-add-to-list',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-to-list.component.scss']
 })
 export class AddToListComponent implements OnInit {
+  @Output() toDoValue: EventEmitter<string>;
+  title: string = "To Do list";
 
-  constructor() { }
+  constructor() { 
+    this.toDoValue = new EventEmitter<string>();
+  }
 
   ngOnInit() {
   }
 
+  emitValue(eventValue: string){
+    console.log('In AddToListComponent', eventValue);
+    this.toDoValue.emit(eventValue);
+  }
 }

@@ -1,1 +1,13 @@
-<p>add-to-list works!</p>
+<mat-card>
+    <mat-card-title>
+        {{title}}
+    </mat-card-title>
+    <mat-form-field appearance="outline" color="warn">
+        <input matInput placeholder="Add Task" [(ngModel)]="newTask">
+    </mat-form-field>
+    <mat-card-actions>
+        <button mat-raised-button (click)="emitValue(newTask)">
+            Add Task
+        </button>
+    </mat-card-actions>
+</mat-card>
