@@ -8,7 +8,7 @@ import { ToDoModel } from '../models/model';
 })
 export class AddToListComponent implements OnInit {
   @Output() toDoValue: EventEmitter<string>;
-  title: string = "To Do list";
+  title: string = "Add To List";
 
   constructor() { 
     this.toDoValue = new EventEmitter<string>();

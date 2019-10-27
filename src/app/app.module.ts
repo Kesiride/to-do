@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './materials/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { DisplayListComponent } from './display-list/display-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddToListComponent,
-    HomeComponent
+    HomeComponent,
+    DisplayListComponent
   ],
   imports: [
     BrowserModule,
