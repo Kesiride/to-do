@@ -1,2 +1,2 @@
-<app-add-to-list></app-add-to-list>
-<app-display-list></app-display-list>
+<app-add-to-list (toDoValue)="getEmittedValue($event)"></app-add-to-list>
+<app-display-list [emittedValue]="fromAddComponent"></app-display-list>
